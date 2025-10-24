@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  web-hextris:
+    container_name: web-hextris
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: web-hextris-image
+    ports:
+      - "8080:80"
+    restart: unless-stopped
